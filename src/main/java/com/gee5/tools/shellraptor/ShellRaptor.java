@@ -37,7 +37,7 @@ public class ShellRaptor extends SQLEditor{
   private boolean testOnly = false;
 
   public ShellRaptor(String args[]){
-
+	new ClassloadManager(verbose);
     try {
       if(args.length > 0){
         try{
@@ -105,7 +105,7 @@ public class ShellRaptor extends SQLEditor{
         }
       }//end if args > 0
 
-      new ClassloadManager(verbose);
+     
       if(verbose)
         System.out.println("{**** " + new java.util.Date().toString() + " ****}");
 
